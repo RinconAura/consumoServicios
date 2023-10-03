@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import axios from 'axios';
 
-createApp(App).mount('#app')
+axios.defaults.baseURL = 'https://fakestoreapi.com'; // URL de la API FakeStore
+
+Vue.config.productionTip = false;
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app');
